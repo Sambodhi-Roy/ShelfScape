@@ -1,1 +1,39 @@
 @import "tailwindcss";
+
+/* Import your fonts CSS */
+@import "./styles/fonts.css";
+
+/* styles.css */
+.hover-link {
+  @apply hover:underline hover:underline-offset-4 hover:text-[#4c59bd];
+}
+
+/* Define accent colors */
+:root {
+  --accent-color: #4c59bd;
+  --accent-color-dark: #3b48a1; /* Slightly darker shade */
+}
+
+/* index.css */
+
+/* Accent color utilities */
+.bg-accent {
+  background-color: var(--accent-color);
+}
+
+.text-accent {
+  color: var(--accent-color);
+}
+
+.border-accent {
+  border-color: var(--accent-color);
+}
+
+/* Hover effects for accent colors */
+.hover\:text-accent:hover {
+  color: var(--accent-color-dark); /* Use darker shade on hover */
+}
+
+.hover\:bg-accent:hover {
+  background-color: var(--accent-color-dark); /* Use darker shade on hover */
+}
