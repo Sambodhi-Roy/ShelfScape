@@ -2,9 +2,22 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <div className="bg-[#FCF5EA] min-h-screen px-6 md:px-20 py-10">
+    <div className="relative bg-[#FCF5EA] min-h-screen px-6 md:px-20 py-10 overflow-hidden">
+      {/* Bottom Corner Images */}
+      <img
+        src="/assets/left.png"
+        alt="Left decoration"
+        className="absolute bottom-[-10px] left-[-40px] w-[500px] md:w-[600px] opacity-100 z-0 pointer-events-none"
+      />
+
+      <img
+        src="./assets/right.png"
+        alt="Right decoration"
+        className="absolute bottom-0 right-0 w-60 md:w-60 opacity-100 z-0 pointer-events-none"
+      />
+
       {/* Navbar */}
-      <nav className="flex justify-between items-center mb-20">
+      <nav className="flex justify-between items-center mb-20 relative z-10">
         <div style={{ fontFamily: "Virgil" }} className="text-2xl font-bold">
           Bookshelf
         </div>
@@ -22,7 +35,7 @@ const Hero = () => {
       </nav>
 
       {/* Hero Content */}
-      <div className="text-center mt-20">
+      <div className="text-center mt-20 relative z-10">
         <h1 className="text-4xl md:text-6xl font-extrabold leading-tight">
           Where{" "}
           <span style={{ fontFamily: "Virgil" }} className="text-accent">
