@@ -1,4 +1,4 @@
-const User = require('../models/User');
+const User = require('../model/User');
 const generateToken = require('../utils/generateToken');
 
 // @desc Register user
@@ -32,17 +32,22 @@ exports.registerUser = async (req, res) => {
 // @desc Login user
 exports.loginUser = async (req, res) => {
     const { email, password } = req.body;
+    console.log("email and password is",{email,password});
 
-    const user = await User.findOne({ email });
+    // const user = await User.findOne({ email });
 
-    if (user && (await user.matchPassword(password))) {
-        res.json({
-            _id: user._id,
-            username: user.username,
-            email: user.email,
-            token: generateToken(user._id),
-        });
-    } else {
-        res.status(401).json({ message: 'Invalid credentials' });
-    }
+    // if (user && (await user.matchPassword(password))) {
+    //     res.json({
+    //         _id: user._id,
+    //         username: user.username,
+    //         email: user.email,
+    //         token: generateToken(user._id),
+    //     });
+    // } else {
+    //     res.status(401).json({ message: 'Invalid credentials' });
+    // }
+    res.status(200).json({
+        message:'login ho gya',
+        
+    })
 };

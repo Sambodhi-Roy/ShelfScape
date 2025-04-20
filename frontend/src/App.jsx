@@ -1,3 +1,4 @@
+import Hero from "./components/Hero";
 import "./index.css";
 import Landing from "./pages/Landing";
 import Login from "./pages/Login";
@@ -6,7 +7,7 @@ import Signup from "./pages/Signup";
 function App() {
   return (
     <>
-      <Signup />
+     <Landing/>
     </>
   );
 }

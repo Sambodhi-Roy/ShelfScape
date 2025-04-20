@@ -1,9 +1,34 @@
 import React, { useState } from "react";
-
+import axios from 'axios'
+import {  useNavigate } from "react-router-dom";
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [authenticating, setAuthenticating] = useState(false); // Placeholder
+  const [authenticating, setAuthenticating] = useState(false); // Placeholde
+  const navigate = useNavigate();
+
+  const handleLogin =  async () => {
+    try {
+      setAuthenticating(true);
+      // Your login logic here
+      // For example, you can use a library like Axios to make a POST request to your server
+      const response = await axios.post('http://localhost:5000/api/auth/login',{
+         email,password
+      });
+
+      console.log(response.data);
+      setAuthenticating(false);
+      navigate('/')
+
+    } catch (error) {
+      console.error(error);
+    }
+    finally{
+      setAuthenticating(false);
+    }
+
+  }
+
 
   return (
     <div className="flex flex-col flex-1 justify-center items-center gap-4 min-h-screen px-4">
@@ -32,7 +57,7 @@ const Login = () => {
       />
 
       <div className="max-w-[400px] w-full mx-auto">
-        <button className="w-full bg-accent hover:bg-indigo-800 text-white font-semibold py-3 rounded-full transition duration-200">
+        <button onClick={handleLogin} className="w-full bg-accent hover:bg-indigo-800 text-white font-semibold py-3 rounded-full transition duration-200">
           {authenticating ? "Submitting" : "Submit"}
         </button>
       </div>
