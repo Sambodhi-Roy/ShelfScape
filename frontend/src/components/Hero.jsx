@@ -2,9 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
-const navigate = useNavigate();
-
-
+  const navigate = useNavigate();
   return (
     <div className="relative bg-[#FCF5EA] min-h-screen px-6 md:px-20 py-10 overflow-hidden">
       {/* Bottom Corner Images */}
@@ -58,10 +56,9 @@ const navigate = useNavigate();
         {/* Buttons */}
         <div className="mt-10 flex justify-center space-x-6">
           <button
-          onClick={()=>(
-            navigate('/login')
-          )}
-          className="bg-accent hover:bg-accent-dark text-white font-semibold py-3 px-8 rounded-xl shadow-lg">
+            onClick={() => navigate("/login")}
+            className="bg-accent hover:bg-accent-dark text-white font-semibold py-3 px-8 rounded-xl shadow-lg"
+          >
             Get Started
           </button>
           <button className="bg-gray-800 hover:bg-accent-dark text-white font-semibold py-3 px-8 rounded-xl shadow-lg">
