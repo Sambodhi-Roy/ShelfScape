@@ -25,9 +25,9 @@ const Hero = () => {
           style={{ fontFamily: "Virgil" }}
           className="hidden md:flex space-x-10 text-sm font-medium"
         >
-          <li className="hover-link text-[20px]">Home</li>
-          <li className="hover-link text-[20px]">About</li>
-          <li className="hover-link text-[20px]">Books</li>
+          <li className="hover-link text-[20px] hover:cursor-pointer">Home</li>
+          <li className="hover-link text-[20px] hover:cursor-pointer">About</li>
+          <li className="hover-link text-[20px] hover:cursor-pointer">Books</li>
         </ul>
         <button className="bg-accent hover:bg-accent-dark text-white font-semibold py-2 px-6 rounded-xl">
           Join Now
