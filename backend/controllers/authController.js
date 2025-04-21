@@ -1,5 +1,6 @@
-const User = require('../models/User');
+const User = require('../model/User');
 const generateToken = require('../utils/generateToken');
+
 
 // @desc Register user
 exports.registerUser = async (req, res) => {
@@ -18,7 +19,7 @@ exports.registerUser = async (req, res) => {
     const user = await User.create({ username, email, password });
 
     if (user) {
-        res.status(201).json({
+        res.status(200).json({
             _id: user._id,
             username: user.username,
             email: user.email,
@@ -29,19 +30,26 @@ exports.registerUser = async (req, res) => {
     }
 };
 
+
 // @desc Login user
 exports.loginUser = async (req, res) => {
     const { email, password } = req.body;
 
     const user = await User.findOne({ email });
+    if(!user){
+        return res.status(404).json({
+            message:'user not found.please register first'
+        })
+    }
 
     if (user && (await user.matchPassword(password))) {
-        res.json({
+        res.status(200).json({
             _id: user._id,
             username: user.username,
             email: user.email,
             token: generateToken(user._id),
         });
+
     } else {
         res.status(401).json({ message: 'Invalid credentials' });
     }
