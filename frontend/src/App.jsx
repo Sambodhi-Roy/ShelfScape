@@ -1,4 +1,3 @@
-import OnboardingCard from "./components/OnboardingCard";
 import "./index.css";
 import GenreSelector from "./pages/GenreSelector";
 import Landing from "./pages/Landing";
@@ -9,6 +8,7 @@ function App() {
   return (
     <>
       <GenreSelector />
+      <Landing />
     </>
   );
 }
