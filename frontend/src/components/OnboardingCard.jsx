@@ -1,6 +1,6 @@
 import React from "react";
 
-const OnboardingCard = ({ name, img, selected, onClick }) => {
+const OnboardingCard = ({ name, img, selected, onClick, user }) => {
   return (
     <div
       onClick={onClick}
