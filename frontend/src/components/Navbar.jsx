@@ -11,13 +11,16 @@ import {
   ChevronLeft,
 } from "lucide-react";
 
+
+
 const navItems = [
   { name: "Home", icon: <Home />, link: "#" },
   { name: "Analytics", icon: <ChartArea />, link: "#" },
   { name: "Goals", icon: <Goal />, link: "#" },
   { name: "Notifications", icon: <Bell />, link: "#" },
-  { name: "Recommend", icon: <WandSparkles />, link: "#" },
+  { name: "Recommend", icon: <WandSparkles />, link: '/book' },
 ];
+
 
 export default function Navbar() {
   const [collapsed, setCollapsed] = useState(false);

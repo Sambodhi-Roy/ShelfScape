@@ -24,7 +24,7 @@ const Signup = () => {
         toast.success("Register successful!");
         const token = response.data.token;
         console.log(" token from backend is ",token);
-        navigate("/");
+        navigate("/genre");
       }
 
     } catch (error) {
@@ -106,7 +106,7 @@ const Signup = () => {
         <button
           onClick={() => {
             toast.info("Redirecting to Login");
-            navigate("/login");
+            navigate("/genre");
           }}
           className="text-accent font-medium hover:underline"
         >

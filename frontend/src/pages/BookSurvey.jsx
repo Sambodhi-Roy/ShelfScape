@@ -1,4 +1,8 @@
 import React, { useState } from "react";
+import axios from "axios";
+import BASE_URL from "../utils/client";
+import {  useNavigate } from "react-router-dom";
+
 
 const books = [
   {
@@ -83,6 +87,19 @@ const books = [
   },
 ];
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 const StarRating = ({ rating, onChange }) => {
   return (
     <div className="flex justify-center gap-1 mt-2">
@@ -130,6 +147,9 @@ const BookCard = ({ title, img, rating, onRatingChange }) => {
 };
 
 const BookSurvey = () => {
+    const navigate = useNavigate();
+
+
   const [ratings, setRatings] = useState({});
   const MIN_RATINGS = 10;
 
@@ -137,6 +157,27 @@ const BookSurvey = () => {
 
   const handleRatingChange = (bookTitle, newRating) => {
     setRatings((prev) => ({ ...prev, [bookTitle]: newRating }));
+  };
+
+  const handleBookRatingUpload = async () => {
+    try {
+      const response = await axios.post(`${BASE_URL}/ml/user-rating`, {
+        ratings
+      });
+     console.log("recommended response ",response)
+      if (response.status === 200) {
+        // Corrected navigation - pass the data in the state property
+        navigate('/recommended-books', { 
+          state: { 
+            data: response.data // Make sure this matches your backend response structure
+          } 
+        });
+      }
+    } catch (error) {
+      console.error('Error uploading ratings:', error);
+      // Optional: Add user feedback here
+      alert('Failed to get recommendations. Please try again.');
+    }
   };
 
   return (
@@ -180,6 +221,7 @@ const BookSurvey = () => {
 
         <div className="flex justify-end gap-4 mt-8 w-full">
           <button
+          onClick={handleBookRatingUpload}
             disabled={ratedCount < MIN_RATINGS}
             className={`px-8 py-3 text-base font-medium rounded-xl transition-all ${
               ratedCount >= MIN_RATINGS

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import OnboardingCard from "../components/OnboardingCard";
+import { useNavigate } from "react-router-dom";
 
 const authors = [
   {
@@ -82,6 +83,7 @@ const authors = [
 
 const AuthorSelector = () => {
   const [selectedAuthors, setSelectedAuthors] = useState([]);
+  const navigate = useNavigate();
 
   const toggleAuthor = (authorName) => {
     setSelectedAuthors((prev) =>
@@ -113,7 +115,11 @@ const AuthorSelector = () => {
         <button className="px-6 py-2 text-sm font-medium rounded-xl bg-white border border-gray-300 shadow-sm hover:bg-gray-100 transition">
           Skip
         </button>
-        <button className="px-6 py-2 text-sm font-medium rounded-xl bg-[#4c59bd] text-white shadow-md hover:bg-[#3b48a1] transition">
+        <button
+        onClick={()=>(
+          navigate('/dashboard')
+        )}
+        className="px-6 py-2 text-sm font-medium rounded-xl bg-[#4c59bd] text-white shadow-md hover:bg-[#3b48a1] transition">
           Next
         </button>
       </div>

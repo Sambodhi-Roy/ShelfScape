@@ -39,8 +39,7 @@ const Login = () => {
     checkToken();
   }, [navigate]);
 
-
-
+  
 
   const handlelogin = async () => {
     setAuthenticating(true);
@@ -54,7 +53,7 @@ const Login = () => {
         const token = response.data.token;
         localStorage.setItem("token", token); 
         toast.success("Login successful!");
-        navigate("/");
+        navigate("/dashboard");
       }
     } catch (error) {
       const message =

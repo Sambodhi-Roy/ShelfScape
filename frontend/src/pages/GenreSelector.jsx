@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import OnboardingCard from "../components/OnboardingCard";
+import { useNavigate } from "react-router-dom";
 
 const genres = [
   { name: "Fantasy", img: "/assets/fantasy-genre.jpg" },
@@ -22,12 +23,14 @@ const genres = [
 
 const GenreSelector = () => {
   const [selectedGenres, setSelectedGenres] = useState([]);
+  const navigate = useNavigate();
 
   const toggleGenre = (genre) => {
     setSelectedGenres((prev) =>
       prev.includes(genre) ? prev.filter((g) => g !== genre) : [...prev, genre]
     );
   };
+  navigate('/auther')
 
   return (
     <div className="bg-[#FCF5EA] min-h-screen pb-8 px-8">
