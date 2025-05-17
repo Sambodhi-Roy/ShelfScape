@@ -37,21 +37,17 @@ ShelfScape is a **book recommendation and community platform** designed to help 
    ```bash
    git clone https://github.com/Sambodhi-Roy/ShelfScape.git
 
-
 2. Navigate to the frontend directory:
    ```bash
    cd shelfscape/frontend
-
 
 3. Install dependencies:
    ```bash
    npm i
 
-
 4. Start the development server:
    ```bash
    npm run dev
-
 
 5. The app will be running at http://localhost:3000
 
