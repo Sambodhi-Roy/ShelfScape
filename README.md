@@ -27,20 +27,20 @@ ShelfScape is a **book recommendation and community platform** designed to help 
 ## 📸 Screenshots
 
 ### 🏠 Landing Page
-![Homepage](https://raw.githubusercontent.com/yourusername/shelfscape/main/screenshots/landing-page.png)
+![Homepage](https://raw.githubusercontent.com/Sambodhi-Roy/ShelfScape/main/screenshots/landing-page.png)
 
 #### 📖 Onboarding Page
-![Onboarding Pages](https://raw.githubusercontent.com/yourusername/shelfscape/main/screenshots/genre-selection.png)
-![Onboarding Pages](https://raw.githubusercontent.com/yourusername/shelfscape/main/screenshots/authors-selection.png)
+![Onboarding Pages](https://raw.githubusercontent.com/Sambodhi-Roy/ShelfScape/main/screenshots/genre-selection.png)
+![Onboarding Pages](https://raw.githubusercontent.com/Sambodhi-Roy/ShelfScape/main/screenshots/authors-selection.png)
 
 ### 📚 Recommendations Section
-![Recommendations](https://raw.githubusercontent.com/yourusername/shelfscape/main/screenshots/recommendation-generation.png)
+![Recommendations](https://raw.githubusercontent.com/Sammbodhi-Roy/ShelfScape/main/screenshots/recommendation-generation.png)
 
 ### 👥 Dashboard
-![Dashboard](https://raw.githubusercontent.com/yourusername/shelfscape/main/screenshots/dashboard.png)
+![Dashboard](https://raw.githubusercontent.com/Sambodhii-Roy/ShelfScape/main/screenshots/dashboard.png)
 
 ### 🔐 Login/Signup Page
-![Login/Signup](https://raw.githubusercontent.com/yourusername/shelfscape/main/screenshots/auth-page.png)
+![Login/Signup](https://raw.githubusercontent.com/Sambodhi-Roy/ShelfScape/main/screenshots/auth-page.png)
 
 
 ## Getting Started
