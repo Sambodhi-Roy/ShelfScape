@@ -35,7 +35,7 @@ ShelfScape is a **book recommendation and community platform** designed to help 
 
 1. Clone the repository:  
    ```bash
-   git clone https://github.com/yourusername/shelfscape.git
+   git clone https://github.com/Sambodhi-Roy/ShelfScape.git
 
 
 2. Navigate to the frontend directory:
